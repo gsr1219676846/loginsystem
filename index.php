@@ -22,7 +22,7 @@ if(!empty($sessData['status']['msg'])){
             );
             $conditions['return_type'] = 'single';
 
-            echo "User is logged in.<br>";
+//            echo "User is logged in.<br>";
 
             $userData = $user->getRows($conditions);
     ?>
@@ -43,7 +43,7 @@ if(!empty($sessData['status']['msg'])){
                 console.log("After triggering the event");
             </script>
 
-     // Here is the user page will show
+<!--      Here is the user page will show-->
     <h2>Welcome <?php echo $userData['first_name']; ?>!</h2>
     <a href="userAccount.php?logoutSubmit=1" class="logout">Logout</a>
     <div class="regisFrm">

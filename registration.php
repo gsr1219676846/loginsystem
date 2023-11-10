@@ -22,5 +22,6 @@ if(!empty($sessData['status']['msg'])){
                 <input type="submit" name="signupSubmit" value="CREATE ACCOUNT">
             </div>
         </form>
+        <p>Have an account? <a href="index.php">LogIn</a></p>
     </div>
 </div>
