@@ -25,8 +25,7 @@ class User{
  
     /*
      * Returns rows from the database based on the conditions
-     * @param string name of the table
-     * @param array select, where, order_by, limit and return_type conditions
+
      */
     public function getRows($conditions = array()){
         $sql = 'SELECT ';
@@ -77,8 +76,7 @@ class User{
  
     /*
      * Insert data into the database
-     * @param string name of the table
-     * @param array the data for inserting into the table
+
      */
     public function insert($data){
         if(!empty($data) && is_array($data)){

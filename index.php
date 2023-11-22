@@ -29,7 +29,7 @@ if(!empty($sessData['status']['msg'])){
             <script>
                 console.log("Before triggering the event");
 
-                // 这段JavaScript代码触发自定义事件
+                //This JavaScript code triggers a custom event
                 window.onload = function() {
                     let userLoggedInEvent = new Event('userLoggedIn');
                     document.dispatchEvent(userLoggedInEvent);

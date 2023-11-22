@@ -1,35 +1,35 @@
 <?php
 // deleteFile.php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // 从POST请求中获取用户名和文件名
+    // Get username and filename from POST request
     $username = $_POST['username'];
     $fileName = $_POST['file'];
 
 
-    // 定义用户文件存储的基本路径
+    //Define the basic path for user file storage
     $basePath = "D:/GSR/Study/Master/CP5047/Storage/";
 
-    // 构建完整的文件路径（包括用户名子目录）
+    // Build the complete file path (including username subdirectory)
     $filePath = $basePath . $username . '/' . $fileName;
 
 
 
-    // 检查文件是否存在
+    // Check if the file exists
     if (file_exists($filePath)) {
-        // 删除文件
+        // Delete Files
         if (unlink($filePath)) {
-            // 返回成功的响应
+            //Return successful response
             echo json_encode(array("success" => true, "message" => "File deleted successfully"));
         } else {
-            // 返回失败的响应
+            //Return failed response
             echo json_encode(array("success" => false, "message" => "Error deleting file"));
         }
     } else {
-        // 文件不存在的错误信息
+        // Error message that the file does not exist
         echo json_encode(array("success" => false, "message" => "File does not exist"));
     }
 } else {
-    // 非POST请求的错误信息
+    // Error message for non-POST requests
     echo json_encode(array("success" => false, "message" => "Invalid request"));
 }
 ?>

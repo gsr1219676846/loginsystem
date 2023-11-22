@@ -3,15 +3,15 @@ if(isset($_GET['file']) && isset($_GET['username'])) {
     $fileName = $_GET['file'];
     $username = $_GET['username'];
 
-    // 定义用户文件存储的基本路径
+    //Define the basic path for user file storage
     $basePath = "D:/GSR/Study/Master/CP5047/Storage/";
 
-    // 构建完整的文件路径（包括用户名子目录）
+    // Build the complete file path (including username subdirectory)
     $filePath = $basePath . $username . '/' . $fileName;
 
-    // 检查文件是否存在
+    // Check if the file exists
     if(file_exists($filePath)) {
-        // 获取文件扩展名
+        // Get file extension
         $fileExtension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 
         switch ($fileExtension) {
@@ -23,18 +23,18 @@ if(isset($_GET['file']) && isset($_GET['username'])) {
                 break;
 
             case 'html':
-                // 对于 HTML 文件
+                // for HTML files
                 header('Content-Type: text/html');
                 echo file_get_contents($filePath);
                 break;
 
             case 'txt':
-                // 对于文本文件
+                // for text files
                 header('Content-Type: text/plain');
                 echo file_get_contents($filePath);
                 break;
 
-            // 可以根据需要添加更多文件类型的处理
+            // You can add more file type processing as needed
 
             default:
                 echo "Unsupported file type.";
