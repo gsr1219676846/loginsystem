@@ -1,4 +1,21 @@
 <?php
+/*
+index.php
+- Acts as the main entry point for the web interface of the extension.
+- Key functionalities:
+  1. Initiates a session and manages session data for user interactions.
+  2. Checks for user login status and displays relevant messages.
+  3. If the user is logged in, retrieves and displays user details like name, email, and phone. It includes 'user.php' for user-related operations.
+  4. Triggers a custom JavaScript event ('userLoggedIn') upon loading, which is used to communicate the login status to other scripts.
+  5. Saves the user's name in localStorage for client-side scripts to access.
+  6. Provides an interface for the user to log out and view their account details.
+  7. For non-logged-in users, displays a login form and the option to navigate to the registration page.
+- This script is crucial for user authentication, providing a gateway to access user-specific features of the extension and managing user sessions.
+*/
+?>
+
+
+<?php
 session_start();
 
 

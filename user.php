@@ -1,5 +1,22 @@
 <?php
 /*
+user.php
+- Defines the User class, primarily used for handling database operations related to user data.
+- Key functionalities:
+  1. Establishes a connection to the MySQL database using provided credentials.
+  2. Contains methods for retrieving (`getRows`) and inserting (`insert`) data in the 'users' table.
+  3. The `getRows` method allows fetching user data based on specified conditions like select, where, order by, limit, etc., and can return data in various formats (all, count, single).
+  4. The `insert` method is used to add new user data into the database. It automatically sets created and modified timestamps and supports insertion of different data types.
+  5. Error handling is implemented in database connection and query execution to ensure robustness.
+- This class is central to the user management aspect of the extension, facilitating the storage, retrieval, and manipulation of user information within the database.
+*/
+?>
+
+
+
+
+<?php
+/*
  * User Class
  * This class is used for database related (connect, fetch, and insert) operations
  *

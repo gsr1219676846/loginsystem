@@ -1,4 +1,24 @@
 <?php
+/*
+upload.php
+- Handles the file upload process for the extension.
+- Key operations include:
+  1. Starting a new session and retrieving the username from POST data.
+  2. Validating the presence of the username and handling any errors related to missing usernames.
+  3. Processing the file upload:
+     - Checking for upload errors and handling them appropriately.
+     - Setting the destination directory for uploads based on the username.
+     - Creating the user's directory if it doesn't exist, with appropriate permissions.
+     - Verifying write permissions for the directory.
+     - Moving the uploaded file to the designated directory.
+  4. Providing feedback on the success or failure of the file upload, including detailed error messages if necessary.
+- This script is crucial for enabling users to upload files to their specific user directory, ensuring a smooth and secure file management experience within the extension.
+*/
+?>
+
+
+
+<?php
 session_start();
 
 // Get the username from POST data

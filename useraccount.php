@@ -1,4 +1,29 @@
 <?php
+/*
+userAccount.php
+- Serves as a core script for user account management within the extension.
+- Key functionalities:
+  1. Initiating and handling session data for maintaining user account states.
+  2. Processing user sign up requests:
+     - Validating input fields, ensuring all required fields are filled.
+     - Verifying password and confirm password match.
+     - Checking for existing users with the same email and handling potential duplicates.
+     - Inserting new user data into the database upon successful validation.
+     - Providing feedback via session data and redirecting to the appropriate page based on the outcome.
+  3. Handling user login requests:
+     - Validating login credentials (email and password).
+     - Fetching user data from the database and setting session variables on successful login.
+     - Offering feedback and redirection based on login success or failure.
+  4. Managing user logout process:
+     - Clearing session data and destroying the session upon logout.
+     - Redirecting to the home page post logout.
+- This script plays a crucial role in enabling user registration, login, and logout functionalities, contributing significantly to the user experience of the extension.
+*/
+?>
+
+
+
+<?php
 //start session
 session_start();
 //load and initialize user class
